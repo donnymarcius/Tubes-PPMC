@@ -64,7 +64,7 @@ char pick (char array[m][n], int row, int column) {
   for (i=0; i<row; i++) {
     for (j=0; j<column; j++) {
       if (array[i][j] == 'X') {
-        if (tetangga[i[j] < 2 || tetangga[i][j] > 3)
+        if (tetangga[i][j] < 2 || tetangga[i][j] > 3)
           array[i][j] = '-';
       }
       else {
