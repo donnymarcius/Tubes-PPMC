@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int input(){
+	char seed;
 	FILE * fp;				//membaca file txt
     fp = fopen(seed,"r");			//seed menyimpan data nama file masukkan user
 
