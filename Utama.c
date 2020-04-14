@@ -9,6 +9,7 @@
 #include "olah_matriks.h"
 #include "input.h"
 #include "animate1.h"
+#include "ouput.h"
 
 int main()
 {
