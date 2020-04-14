@@ -7,8 +7,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "olah_matriks.h"
-// #include fungsi peye
-// #include fungsi hendra
+#include "input.h"
+#include "animate1.h"
 
 int main()
 {
@@ -21,20 +21,21 @@ int main()
 	printf("4. Menu Animate untuk melakukan n-iterasi \n");
 	printf("5. Menu Quit untuk keluar dari permainan \n");
 	
-	// meminta inputan seed dan memasukan ke matriks awal
+	// meminta inputan seed dan memasukan ke matriks awal asumsikan seed awal yang dimasukan benar
 	char seed[100];
 	printf ("Masukan seed awal : ");
 	gets(seed);
 	//fungsi peye
 	
 	// pilihan menu
-	int pilih, n;
+	int pilih, n,m,a,b;
 	printf("Menu : \n");
 	printf("1.Tick\n");
 	printf("1.Animate\n");
 	printf("3.Quit\n");
 	printf("Masukan pilhan : ");
 	scanf ("%d", &pilih);
+
 	while (pilih != 3)
 	{
 		while (pilih !=1 && pilih != 2)
@@ -43,16 +44,20 @@ int main()
 			printf("Masukan pilhan : ");
 			scanf ("%d", &pilih);
 		}
-		if (pilih == 1)
-		{
-			//fungsi donny
-		}
-		else if (pilih == 2)
-		{
+		switch(pilih)
+		case'1' :
+			pick(char iterasi[i][j], int a, int b);
+			cetak(char iterasi[i][j], int a, int b);
+		break;
+		case'2' :
 			printf ("jumlah iterasi : ");
 			scanf("%d", &n);
-			//fungsi hendra
-		}
+			for(m=0; m<=n ; i++)
+			{
+				pick(char iterasi[i][j], int a, int b);
+				cetak(char iterasi[i][j], int a, int b);
+			}
+		break;
 		printf("Menu : \n");
 		printf("1.Tick\n");
 		printf("1.Animate\n");
@@ -60,6 +65,19 @@ int main()
 		printf("Masukan pilhan : ");
 		scanf ("%d", &pilih);
 	}
+	char seed[100];
+	printf ("Masukan seed awal : ");
+	gets(seed);
+	//fungsi peye
+	
+	// pilihan menu
+	int pilih, n,m,a,b;
+	printf("Menu : \n");
+	printf("1.Tick\n");
+	printf("1.Animate\n");
+	printf("3.Quit\n");
+	printf("Masukan pilhan : ");
+	scanf ("%d", &pilih);	
 	return 0;
 }
 		 
