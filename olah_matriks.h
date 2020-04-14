@@ -2,7 +2,7 @@
 Nama        : Donny Marcius / 18318009
 File        : olah_matriks.h
 Deskripsi   : mengolah 2-dimensional array of char sesuai aturan conway's game of life
-              (pakai definisi wikipedia)
+              (pakai definisi soal)
 Keterangan:
 untuk pakai fungsi di file ini, cukup ketik = 'pick (array, row, column)'
 dimana: array itu array of char dari file seed
@@ -64,7 +64,7 @@ char pick (char array[m][n], int row, int column) {
   for (i=0; i<row; i++) {
     for (j=0; j<column; j++) {
       if (array[i][j] == 'X') {
-        if (tetangga[i][j] <= 2 || tetangga[i][j] > 3)
+        if (tetangga[i][j] < 2 || tetangga[i][j] > 4)
           array[i][j] = '-';
       }
       else {
