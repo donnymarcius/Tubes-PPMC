@@ -1,12 +1,12 @@
 /*Nama : Rahmatul Fajriah
   NIM : 18318008
-  program ini merupakan program utama dari file program ini mengimpor fungsi-fungsi
-  yang telah di buat dan di defenisikan pad header file
+  program ini merupakan program utama dengan mengimpor fungsi-fungsi
+  yang telah di buat yang di defenisikan pada header file
  */
  
 #include <stdio.h>
 #include <string.h>
-//#include <olah_matriks.h>
+#include "olah_matriks.h"
 // #include fungsi peye
 // #include fungsi hendra
 
