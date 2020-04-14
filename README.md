@@ -10,7 +10,7 @@ Definisi tetangga disini adalah elemen-elemen pada matriks[m][n] lain yang menge
 Solusi permasalahan dimulai dengan membuat matriks lain dengan baris m dan kolom n yang kemudian disebut nilai[m][n]. Komponen-komponen elemen dalam nilai[m][n] pada baris i dan kolom j diisi jumlah tetangga elemen[i][j] pada matriks[m][n].
 
 Pada 1x iterasi (tick), matriks[m][n] akan diubah berdasarkan kondisi matriks[m][n] sebelumnya dan nilai[m][n] sesuai dengan aturan soal. Keempat aturan yang dideskripsikan di bagian deskripsi masalah dapat dirangkum menjadi 3 hal:
-	Jika elemen[i][j] pada matriks[m][n] hidup dan nilai[m][n] pada baris i kolom j bernilai < 1 atau > 4, maka elemen[i][j] akan berubah menjadi mati.
+	Jika elemen[i][j] pada matriks[m][n] hidup dan nilai[m][n] pada baris i kolom j bernilai <= 1 atau > 4, maka elemen[i][j] akan berubah menjadi mati.
 	Jika elemen[i][j] pada matriks[m][n] mati dan nilai[m][n] pada baris i dan kolom j bernilai = 3 maka elemen[i][j] akan berubah menjadi hidup.
 	Selain kedua kondisi tersebut, elemen[i][j] akan tetap, tidak mengalami perubahan dari mati ke hidup ataupun sebaliknya.
 
