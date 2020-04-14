@@ -1,23 +1,31 @@
 #include <stdio.h>
+int getRow (char seed[100]){
+ 	FILE * fp;		//membaca file txt
+ 	fp = fopen(seed,"r");	//seed menyimpan data nama file masukkan user
+ 	int a;			//a menyimpan nilai baris
+ 	fscanf(fp,"%d",&a);	//mengambil nilai baris dari file txt
+ 	fclose (fp);		//menutup file
+ 	return a;		//mengembalikan nilai a
+ }
 
- input(){
-	char seed;
-	FILE * fp;				//membaca file txt
-    fp = fopen(seed,"r");			//seed menyimpan data nama file masukkan user
+int getColumn (char seed[100]){
+	File *fp;
+	fp = fopen(seed,"r");
+	int i,b;
+	int arr[100];
+	for(i=0; i<2; i++){
+		fscanf(fp, "%d", &arr[i]);
+	}
+	b = arr[1];
+	fclose(fp);
+	return b;
+}
 
-    int barlom[2];
-    int i,a,b;
-
-    for(i=0; i<2; i++) {			//mengambil nilai baris dan kolom dari file txt
-            fscanf(fp,"%d",&barlom[i]);		// barlom[i] menyimpan nilai baris dan kolom
-    }
-    a = barlom[0];				// a merupakan nilai baris
-    b = barlom[1];				// b merupakan nilai kolom
-    /*printf("\n%d\n",a);			//mengetes kesesuaian nilai yang didapat dengan nilai yang ada di file txt
-    printf("%d\n",b);*/
-    
-    int j,k;					//mengambil sell dari file txt menyimpannya di array
-    char seedawal[100][100];			//seedawal[100][100] berisi sell
+char getSeed (a,b,char seed[100]){
+	File *fp;
+	fp = fopen(seed,"r")
+	int m,n;					
+    char seedawal[100][100];			
     char ch;
     ch = fgetc (fp); printf ("%c", ch);
     for(m=0; m<a; m++) {
@@ -26,14 +34,6 @@
         }
         ch = fgetc(fp);
 	}
-	
-	/*for(m=0; m<a; m++) {			//mengecek isi array seedawal[m][n]
-    	for(n=0; n<b; n++){
-            printf("%c",seedawal[m][n]);
-        }
-        printf("\n");
-    }*/
-
-    fclose(fp);					//menutup file
-    return 0;
+	fclose (fp);
+	return seedawal;
 }
