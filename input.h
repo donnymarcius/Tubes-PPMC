@@ -9,7 +9,7 @@ int getRow (char seed[100]){
  }
 
 int getColumn (char seed[100]){
-	File *fp;
+	FILE *fp;
 	fp = fopen(seed,"r");
 	int i,b;
 	int arr[100];
@@ -21,19 +21,30 @@ int getColumn (char seed[100]){
 	return b;
 }
 
-char getSeed (a,b,char seed[100]){
-	File *fp;
-	fp = fopen(seed,"r")
+char getSeed (int a, int b, char seed[100]){
+	FILE *fp;
+	fp = fopen(seed,"r");
 	int m,n;					
-    char seedawal[100][100];			
+    char array[100][100];			
     char ch;
     ch = fgetc (fp); printf ("%c", ch);
-    for(m=0; m<a; m++) {
+    for(m=0; m<(a+2); m++) {
         for(n=0; n<b; n++) {
-            fscanf(fp,"%c",&seedawal[m][n]);
+            fscanf(fp,"%c",&array[m][n]);
         }
         ch = fgetc(fp);
 	}
+	int i,j;
+	int k = 2;
+	int l = 0;
+	char seedawal[100][100];
+	for (i=0; 1<a; i++){
+		for(j=0; j<b; j++){
+			seedawal[i][j] == array[k][l];
+			k++;
+			l++;
+		}
+	}
 	fclose (fp);
-	return seedawal;
+	return seedawal[m][n];
 }
