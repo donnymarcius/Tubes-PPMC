@@ -24,9 +24,12 @@ int main()
 	
 	// meminta inputan seed dan memasukan ke matriks awal asumsikan seed awal yang dimasukan benar
 	char seed[100];
+	int a,b;
 	printf ("Masukan seed awal : ");
 	gets(seed);
-	//fungsi peye
+	a = getRow(char seed[100]);
+	b = getColumn(char seed[100]);
+	iterasi[i][j] = getSeed(int a, int b, char seed[100]);
 	
 	// pilihan menu
 	int pilih, n,m,a,b;
@@ -53,7 +56,7 @@ int main()
 		case'2' :
 			printf ("jumlah iterasi : ");
 			scanf("%d", &n);
-			for(m=0; m<=n ; i++)
+			for(m=0; m<=n ; m++)
 			{
 				pick(char iterasi[i][j], int a, int b);
 				cetak(char iterasi[i][j], int a, int b);
@@ -65,20 +68,7 @@ int main()
 		printf("3.Quit\n");
 		printf("Masukan pilhan : ");
 		scanf ("%d", &pilih);
-	}
-	char seed[100];
-	printf ("Masukan seed awal : ");
-	gets(seed);
-	//fungsi peye
-	
-	// pilihan menu
-	int pilih, n,m,a,b;
-	printf("Menu : \n");
-	printf("1.Tick\n");
-	printf("1.Animate\n");
-	printf("3.Quit\n");
-	printf("Masukan pilhan : ");
-	scanf ("%d", &pilih);	
+	}	
 	return 0;
 }
 		 
