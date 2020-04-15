@@ -3,48 +3,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <conio.h>
+int i;
+int j;
 
-const int WIDTH = 67;
-const int HEIGHT = 47;
+void delay(int milliseconds);
 
-
-void displayarray(int board[HEIGHT][WIDTH])
+int main()
 {
-int rows;
-int cols;
-    for (rows = 0; rows <HEIGHT; rows++)
+    int x;
+    
+    void cetak (char array[i][j], int a, int b)
     {
-        for(cols =0; cols <WIDTH; cols++)
-            printf ("%3c", board[rows][cols]);
-        printf ("\n");
+
+	    for(i=0;i<=a;i++)
+    	{
+    		for(j=0;j<=b;j++)
+    		{
+    			printf("%c",array[i][j]);
+    			delay(250);
+	    	}
+    		printf("\n");
+    	}
     }
 }
 
-void checknewneighbors (int board[HEIGHT][WIDTH])
+void delay(int milliseconds)
 {
-    int neighbors;
-    int rows;
-    int cols;
-    int a, b;
-    for (rows =1; rows <HEIGHT -1; rows++)
-    {
-        for (cols = 1; cols <WIDTH -1; cols ++)
-        {
-            neighbors = 0;
-            if (board[rows][cols] == ' ')
-            {
-                for (a = -1; a <2; a++)
-                {
-                    for (b = -1; b <2; b++)
-                        if (((rows +a) == rows) && ((cols +b) == cols))
-                            neighbors = neighbors;
-                        else if ((board[rows +a][cols +b] == 'O') || (board[rows +a][cols +b] == 1) || (board[rows +a][cols +b] == 0))
-                            neighbors++;
-                }
-                if ((neighbors == 3))
-                    board[rows][cols] = 2; 
-            }
-        }
-    }
+    long pause;
+    clock_t now,then;
+
+    pause = milliseconds*(CLOCKS_PER_SEC/1000);
+    now = then = clock();
+    while( (now-then) < pause )
+        now = clock();
 }
