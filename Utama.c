@@ -24,19 +24,19 @@ int main()
 	
 	// Deklrasi dan Inisialisai program
 	int keluar = 0	;					// inisialisasi nilai keluar == 0
-	int pilih;							// deklarasi pilih berupa integer yang akan  menyimpan nilai untuk pemilihan menu
+	int pilih;						// deklarasi pilih berupa integer yang akan  menyimpan nilai untuk pemilihan menu
 	int a,b,n,m;						// deklarasi integer yang akan digunakan pada program ini
-	char kel;							// deklasi kel berupa char yang akan menyimpan sebuah karakter untu permintaan keluar program
+	char kel;						// deklasi kel berupa char yang akan menyimpan sebuah karakter untu permintaan keluar program
 	char seed[100];						// deklarasi array seed tipe data string yang akan menyimpan file seed awal permainan
-	char iterasi[100][100];			// array of string yang akan menampung isi dari file eksternal
-	printf ("Masukan seed awal : ");	// meminta inputan seed awal(array seed)
-	gets(seed);							// menyimpan inputan pada array seed
-	/*a = getRow(seed);					// memanggil fungsi getRow yang terdapat pada file header input.h yang akan meberikan niai untuk banyak baris pada matriks
-	b = getColumn(seed);				// memanggil fungsi getColumn yang terdapat pada file header input.h yang akan meberikan niai untuk banyak kolom pada matriks
-	getSeed(a,b,seed,iterasi);			// memanggil fungsi getseed yang terdapat pada file header input.h yang akan merubah file eksternal menjadi matriks
-	cetak(iterasi,a,b);	*/			// memanggil fungsi cetak yng erdapat pada file header output.h
+	char iterasi[100][100];					// array of string yang akan menampung isi dari file eksternal
+	printf ("Masukan seed awal : ");			// meminta inputan seed awal(array seed)
+	gets(seed);						// menyimpan inputan pada array seed
+	a = getRow(seed);					// memanggil fungsi getRow yang terdapat pada file header input.h yang akan meberikan niai untuk banyak baris pada matriks
+	b = getColumn(seed);					// memanggil fungsi getColumn yang terdapat pada file header input.h yang akan meberikan niai untuk banyak kolom pada matriks
+	getSeed(a,b,seed,iterasi);				// memanggil fungsi getseed yang terdapat pada file header input.h yang akan merubah file eksternal menjadi matriks
+	cetak(iterasi,a,b);					// memanggil fungsi cetak yng erdapat pada file header output.h
 		
-	while (keluar == 0)                 // selama nilai keluar bernilai 0
+	while (keluar == 0)               		  	// selama nilai keluar bernilai 0
 	{									//maka
 										// mencetak pilihan menu permainan
 		printf("Menu : \n");
