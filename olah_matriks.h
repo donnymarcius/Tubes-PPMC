@@ -18,6 +18,9 @@ dimana: array itu array of char dari file seed
 
 int atas_kiri (int val, int max) {
   // case mentok atas/kiri
+  // misal lagi di baris 0 kan tetangga atasnya nggak mungkin baris -1
+  // makanya ada fungsi ini (berlaku juga untuk kolom 0 / terkiri)
+  // sementara untuk sel tengah tetap dikurangi 1 tidak masalah
   if (val == -1)
     return (max-1);
   else
@@ -26,6 +29,9 @@ int atas_kiri (int val, int max) {
 
 int bawah_kanan (int val, int max) {
   // case mentok bawah/kanan
+  // misal lagi di baris max kan tetangga bawahnya nggak mungkin baris max+1
+  // makanya ada fungsi ini (berlaku juga untuk kolom max / terkanan)
+  // sementara untuk sel tengah tetap ditambah 1 tidak masalah
   if (val == max)
     return 0;
   else
