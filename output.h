@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int i;
 int j;
-char cetak (char array[i][j], int a, int b)
+void cetak (char array[i][j], int a, int b)
 {
 
 	for(i=0;i<=a;i++)
@@ -13,5 +13,4 @@ char cetak (char array[i][j], int a, int b)
 		}
 		printf("\n");
 	}
-	return array[i][j];
 }
