@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int i;
 int j;
-int cetak (char array[i][j], int a, int b)
+char cetak (char array[i][j], int a, int b)
 {
 
 	for(i=0;i<=a;i++)
