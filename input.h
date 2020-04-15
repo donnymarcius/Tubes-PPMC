@@ -9,42 +9,36 @@ int getRow (char seed[100]){
  }
 
 int getColumn (char seed[100]){
-	FILE *fp;
-	fp = fopen(seed,"r");
-	int i,b;
-	int arr[100];
-	for(i=0; i<2; i++){
-		fscanf(fp, "%d", &arr[i]);
+	FILE *fp;			//membaca file txt
+	fp = fopen(seed,"r");		//seed menyimpan data nama file masukkan user
+	int i,b;			//b menyimpan nilai kolom
+	for(i=0; i<2; i++){		//melakukan 2 kali fscanf
+		fscanf(fp, "%d", &b);	//mengambil nilai dari file txt
 	}
-	b = arr[1];
-	fclose(fp);
-	return b;
+	fclose(fp);			//menutup file
+	return b;			//mengembalikan nilai b
 }
 
-char getSeed (int a, int b, char seed[100]){
-	FILE *fp;
-	fp = fopen(seed,"r");
-	int m,n;					
-    char array[100][100];			
+char getSeed (int a, int b, char seed[100],char seedawal[100][100]){
+	FILE * fp;				//membaca file txt
+    fp = fopen(seed,"r");			//seed menyimpan data nama file masukkan user
+
+    int barlom;					//barlom menyimpan data tidak perlu dari file txt
+    int i;
+    for(i=0; i<2; i++) {			//melakulan 2 kali scan data
+            fscanf(fp,"%d",&barlom);		//mengambil data tidak perlu dari file txt
+    }
+    
+    int m,n;					//mengambil sell dari file txt menyimpannya di array
     char ch;
     ch = fgetc (fp); printf ("%c", ch);
-    for(m=0; m<(a+2); m++) {
+    for(m=0; m<a; m++) {
         for(n=0; n<b; n++) {
-            fscanf(fp,"%c",&array[m][n]);
+            fscanf(fp,"%c",&seedawal[m][n]);	//mengambil data selanjutnya (seed)
         }
         ch = fgetc(fp);
 	}
-	int i,j;
-	int k = 2;
-	int l = 0;
-	char seedawal[100][100];
-	for (i=0; 1<a; i++){
-		for(j=0; j<b; j++){
-			seedawal[i][j] == array[k][l];
-			k++;
-			l++;
-		}
-	}
-	fclose (fp);
-	return seedawal[m][n];
+	
+    fclose(fp);					//menutup file
+    return seedawal[m][n];
 }
