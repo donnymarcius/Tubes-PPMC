@@ -23,8 +23,8 @@ int main()
 	printf("5. Tekan 3 untuk menu Quit keluar dari permainan \n");
 	
 	// Deklrasi dan Inisialisai program
-	int keluar = 0	;					// inisialisasi nilai keluar == 0
-	char pilih[10];						// deklarasi pilih berupa char yang akan  menyimpan nilai untuk pemilihan menu
+	int keluar = 0;						// inisialisasi nilai keluar == 0
+	char pilih;						// deklarasi pilih berupa char yang akan  menyimpan nilai untuk pemilihan menu
 	int a,b,n,m;						// deklarasi integer yang akan digunakan pada program ini
 	char kel;						// deklasi kel berupa char yang akan menyimpan sebuah karakter untu permintaan keluar program
 	char seed[100];						// deklarasi array seed tipe data string yang akan menyimpan file seed awal permainan
@@ -44,26 +44,25 @@ int main()
 		printf("2.Animate\n");
 		printf("3.Quit\n");
 		printf("Masukan pilhan : ");
-		gets(pilih)
+		scaanf("" %c", &pilih);
 		
 		switch(pilih)					// memecah beberapa kondisi pilih menu
 		{
 			case '1' :				// jika memilih 1 maka 
-				pick(iterasi,a,b);		// melakuakn tick pada iterasi  yang tersimpan sebelumnya
+				tick(iterasi,a,b);		// melakuakn tick pada iterasi  yang tersimpan sebelumnya
 				cetak(iterasi,a,b);		// mencetak hasil dari tick
-			break;
-			
+				break;
 			case '2' :							// jika memilih 1 maka 
 				printf ("jumlah iterasi : "); 				// meinta jumlah iterasi
 				scanf("%d", &n);					// meyimpan jumlah iterasi pada variabel n
 				for(m=0; m<n; m++)
 				{
-					pick(iterasi,a,b);		// melakuakn tick pada iterasi  yang tersimpan sebelumnya sebanyak n kali
+					tick(iterasi,a,b);		// melakuakn tick pada iterasi  yang tersimpan sebelumnya sebanyak n kali
 					cetak(iterasi,a,b);		// mencetak hasil dari tick
-					//animate nya jadi fungsi ato disisni langsung ???
+					delay(250);
+					print("\n");
 				}
-			break;
-			
+				break;
 			case '3' :									// jika memilih 3 maka 
 				printf ("lanjutkan permainan Y/N : ");					// menyanyakan permainan kan di lanjutkan atau stop
 				scanf(" %c", &kel);							// menyimpan jawaban ke  kel 
@@ -80,8 +79,7 @@ int main()
 						getSeed(a,b,seed,iterasi);				// memanggil fungsi getseed yang terdapat pada file header input.h yang akan merubah file eksternal menjadi matriks
 						cetak(iterasi,a,b);					// memanggil fungsi cetak yng erdapat pada file header output.h
 					}
-			break;
-			
+				break;
 			default :									// jika pilhan menu salah maka akan mencetak pilihan menu salah
 				printf("Pilihan menu anda salah\n");
 			break;	 
@@ -89,4 +87,3 @@ int main()
 	}
 	return 0;
 }
-
