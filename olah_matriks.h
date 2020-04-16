@@ -3,7 +3,7 @@ Nama        : Donny Marcius / 18318009
 File        : olah_matriks.h
 Deskripsi   : mengolah 2-dimensional array of char sesuai aturan conway's game of life
 Keterangan:
-untuk pakai fungsi di file ini, cukup ketik = 'pick (array, row, column)'
+untuk pakai fungsi di file ini, cukup ketik = 'tick (array, row, column)'
 dimana: array itu array of char dari file seed
         row = baris pertama file seed (baris dari array)
         column = baris kedua file seed (baris dari array)
@@ -44,8 +44,8 @@ int neighbour_value (int array[m][n], int i, int j, int row, int column) {
   return value;
 }
 
-char pick (char array[m][n], int row, int column) {
-  // fungsi pick (iterasi 1 kali)
+char tick (char array[m][n], int row, int column) {
+  // fungsi tick (iterasi 1 kali)
   int i, j, array_integer[m][n] = {0}, tetangga[m][n] = {0};
 
   // translate array ke array of integer (mati = 0, hidup = 1) supaya mudah hitung 'tetangga' yang hidup
