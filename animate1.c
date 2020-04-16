@@ -21,6 +21,7 @@ int main()
     		{
     			printf("%c",array[i][j]);
     			delay(250);
+    			system("clear");
 	    	}
     		printf("\n");
     	}
