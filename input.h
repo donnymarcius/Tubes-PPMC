@@ -31,7 +31,7 @@ char getSeed (int a, int b, char seed[100],char seedawal[100][100]){
     
     int m,n;					//mengambil sell dari file txt menyimpannya di array
     char ch;
-    ch = fgetc (fp); printf ("%c", ch);
+    ch = fgetc (fp);
     for(m=0; m<a; m++) {
         for(n=0; n<b; n++) {
             fscanf(fp,"%c",&seedawal[m][n]);	//mengambil data selanjutnya (seed)
