@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-void cetak (char array[100][100], int a, int b)
+#define m 100 		// asumsikan panjang baris maksimal file eksternal 100
+#define n 100		// asumsikan panjang kolom maksimal file eksternal 100
+void cetak (char array[m][n], int a, int b)
 {
 	int i, j;
 	for(i=0;i<=a;i++)
