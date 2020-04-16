@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-int i;
-int j;
-void cetak (char array[i][j], int a, int b)
+void cetak (char array[100][100], int a, int b)
 {
-
+	int i, j;
 	for(i=0;i<=a;i++)
 	{
 		for(j=0;j<=b;j++)
