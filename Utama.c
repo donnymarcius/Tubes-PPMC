@@ -34,30 +34,31 @@ int main()
 	char kel;																// deklasi kel berupa char yang akan menyimpan sebuah karakter untu permintaan keluar program
 	char seed[100];															// deklarasi array seed tipe data string yang akan menyimpan file seed awal permainan
 	char iterasi[m][n];														// array of string yang akan menampung isi dari file eksternal
-  printf ("\nMasukan nama file seed awal(dalam format: namafile.txt): ");	// meminta inputan seed awal(array seed)
+  printf ("\nMasukan nama file seed awal (dalam format: namafile.txt): ");	// meminta inputan seed awal(array seed)
   gets (seed);	
 																// menyimpan inputan pada array seed
   FILE* fp = fopen (seed,"r");												// membuka dan membaca file eksternal
   while(fp == NULL)								
 	{
-		printf("\nFile \"%s\" tidak berada di dalam folder yang sama!\nLanjutkan permainan? Ketik Y untuk ya atau N untuk tidak: ", seed);
+		printf("\nFile \"%s\" tidak berada di dalam folder yang sama!\nLanjutkan permainan? (Ketik Y untuk ya atau N untuk tidak): ", seed);
 		scanf (" %c",&kel);							// menyimpan jawaban ke  kel
 
 		while(kel != 'Y'&& kel != 'N')
 		{
 			printf ("Pilihan anda salah! Cukup Y atau N saja.\n");
-			printf("Lanjutkan permainan? Ketik Y untuk ya atau N untuk tidak: ");					// menyanyakan permainan kan di lanjutkan atau stop
+			printf("Lanjutkan permainan? (Ketik Y untuk ya atau N untuk tidak): ");					// menyanyakan permainan kan di lanjutkan atau stop
 			scanf (" %c", &kel);							// menyimpan jawaban ke kel
 			
 		}
 		if (kel == 'N')								// bila kel sama dengan N maka program stop
 		{
+			printf ("Keluar dari program...\n");
 			exit(0);
 		}
 		else 										// bil kel sam dengan Y , maka
 		{
 			getchar();
-			printf ("\nMasukan nama file seed awal(dalam format: namafile.txt): ");	// meminta inputan seed awal(array seed)
+			printf ("\nMasukan nama file seed awal (dalam format: namafile.txt): ");	// meminta inputan seed awal(array seed)
 			gets (seed);																// menyimpan inputan pada array seed
 			fp = fopen (seed,"r");												// membuka dan membaca file eksternal
 		}
@@ -78,10 +79,10 @@ int main()
 	while (keluar == 0)                 // selama nilai keluar bernilai 0
 	{									//maka						
 		// mencetak pilihan menu permainan
-		printf("\nMenu : \n");
-		printf("1.Tick\n");
-		printf("2.Animate\n");
-		printf("3.Quit\n");
+		printf("\nMenu: \n");
+		printf("1. Tick\n");
+		printf("2. Animate\n");
+		printf("3. Quit\n");
 		printf("Masukan nomor menu: ");
 		scanf(" %c", &pilih);
 		
@@ -120,12 +121,12 @@ int main()
 				break;
 			
 			case '3' :											// jika memilih 3 maka 
-				printf("Lanjutkan permainan? ketik Y untuk ya atau N untuk tidak: "); 	// menanyakan ingin melanjutkan permainan
+				printf("Lanjutkan permainan? (Ketik Y untuk ya atau N untuk tidak): "); 	// menanyakan ingin melanjutkan permainan
 				scanf (" %c", &kel);													// menyimpan input ke dalam kel}
 				while (kel != 'Y' && kel != 'N')
 				{
-					printf("Pilihan anda salah! Cukup Y atau N ");
-					printf("Lanjutkan permainan? ketik Y untuk ya atau N untuk tidak: "); 	// menanyakan ingin melanjutkan permainan
+					printf("Pilihan anda salah! Cukup Y atau N saja.\n");
+					printf("Lanjutkan permainan? (Ketik Y untuk ya atau N untuk tidak): "); 	// menanyakan ingin melanjutkan permainan
 					scanf (" %c", &kel);													// menyimpan input ke dalam kel}
 				}
 				if (kel == 'N')								// bila kel sama dengan N maka program stop
@@ -135,28 +136,29 @@ int main()
 				else 										// bil kel sam dengan Y , maka
 				{
 					getchar();
-					printf ("\nMasukan nama file seed awal(dalam format: namafile.txt): ");	// meminta inputan seed awal(array seed)
+					printf ("\nMasukan nama file seed awal (dalam format: namafile.txt): ");	// meminta inputan seed awal(array seed)
 					gets(seed);																// menyimpan inputan pada array seed
 					FILE *fp = fopen(seed,"r");												// membuka dan membaca file eksternal
 					while(fp == NULL)								
 					{
-						printf("\nFile\"%s\" tidak berada di dalam folder yang sama!", seed);						
-						printf("\nLanjutkan permainan? ketik Y untuk ya atau N untuk tidak: "); // menanyakan ingin melanjutkan permainan
+						printf("\nFile \"%s\" tidak berada di dalam folder yang sama!", seed);						
+						printf("\nLanjutkan permainan? (Ketik Y untuk ya atau N untuk tidak): "); // menanyakan ingin melanjutkan permainan
 						scanf (" %c", &kel);												// menyimpan input ke dalam kel
 						while (kel != 'Y' && kel != 'N')
 						{
-							printf("Pilihan anda salah! Cukup Y atau N ");
-							printf("Lanjutkan permainan? ketik Y untuk ya atau N untuk tidak: "); 	// menanyakan ingin melanjutkan permainan
+							printf("Pilihan anda salah! Cukup Y atau N saja.\n");
+							printf("Lanjutkan permainan? (Ketik Y untuk ya atau N untuk tidak): "); 	// menanyakan ingin melanjutkan permainan
 							scanf (" %c", &kel);													// menyimpan input ke dalam kel}
 						}
 						if (kel == 'N')								// bila kel sama dengan N maka program stop
 						{
+							printf ("Keluar dari program...\n");
 							exit(0);
 						}
 						else 						// bil kel sam dengan Y , maka
 						{
 							getchar();
-							printf ("\nMasukan nama file seed awal(dalam format: namafile.txt): ");	// meminta inputan seed awal(array seed)
+							printf ("\nMasukan nama file seed awal (dalam format: namafile.txt): ");	// meminta inputan seed awal(array seed)
 							gets(seed);																// menyimpan inputan pada array seed
 							fp = fopen(seed,"r");												// membuka dan membaca file eksternal
 						}
@@ -177,10 +179,10 @@ int main()
 				break;
 				
 			default :											// jika pilhan menu salah maka akan mencetak pilihan menu salah
-				printf("Pilihan menu anda salah\n");
+				printf("Pilihan menu anda salah! Cukup nomor menu saja.\n");
 				break;	 
 		}
 	}
-	printf("Keluar dari permainan...\n");
+	printf("Keluar dari program...\n");
 	return 0;
 }
