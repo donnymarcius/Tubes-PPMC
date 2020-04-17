@@ -1,3 +1,11 @@
+/*EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
+ * Modul 8 - TUGAS BESAR
+ * Kelompok			: 5
+ * Hari dan Tanggal		: Kamis,  Maret 
+ * Asisten (NIM)		: Akmal Narendra Sakti (13217034)
+ * Nama file 		 	: output.h
+ * Deskripsi			: Program mencetak array untuk seed permainan Game Of life
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #define m 100 		// asumsikan panjang baris maksimal file eksternal 100
