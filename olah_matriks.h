@@ -1,13 +1,11 @@
-/*
-Nama        : Donny Marcius / 18318009
-File        : olah_matriks.h
-Deskripsi   : mengolah 2-dimensional array of char sesuai aturan conway's game of life
-Keterangan:
-untuk pakai fungsi di file ini, cukup ketik = 'tick (array, row, column)'
-dimana: array itu array of char dari file seed
-        row = baris pertama file seed (baris dari array)
-        column = baris kedua file seed (baris dari array)
-*/
+/*      EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
+ *      MODUL 8 - TUGAS BESAR
+ *      Kelompok                : 5
+ *      Hari dan Tanggal        : Jumat, 17 April 2020
+ *      Asisten (NIM)           : Akmal Narendra Sakti	(13217074)
+ *      Nama File               : olah_matriks.h
+ *      Deskripsi               : mengolah 2-dimensional array of char sesuai aturan conway's game of life
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
