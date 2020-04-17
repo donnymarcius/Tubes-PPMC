@@ -1,3 +1,13 @@
+/* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
+* MODUL 8 – TUGAS BESAR
+* Kelompok : 1
+* Hari dan Tanggal : Kamis, 29 Maret 2018
+* Asisten (NIM) : Akmal Narendra Sakti (13217034)
+* Nama File : input.h
+* Deskripsi : Header input untuk program utama, membaca file eksternal (txt),
+	      lalu mengambil informasi jumlah baris, kolom, dan memindahkan seed pada array untuk diolah selanjutnya
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 // asumsi maksimal file seed 100 baris dan 100 kolom
