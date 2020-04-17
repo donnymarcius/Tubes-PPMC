@@ -1,6 +1,11 @@
-//Hendra Chayadi Sutanto(18318013) 
-//File        : animate.h 
-//Deskripsi   : Mengatur proses animasi dari output pada program Game of Life
+//EL2208 Praktikum Pemecahan Masalah dengan C
+//MODUL 8- Tugas Besar
+//Nama (NIM)        : Hendra Chayadi Sutanto(18318013) 
+//Asisten (NIM)     : Akmal Narendra Sakti (13217034)
+//Kelompok          : 5
+//File              : animate.h 
+//Hari dan Tanggal  : Jumat, 17 April 2020
+//Deskripsi         : Mengatur proses animasi dari output pada program Game of Life
 
 #include <stdio.h>
 #include <stdlib.h>
