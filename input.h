@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+// asumsi maksimal file seed 100 baris dan 100 kolom
 #define m 100
 #define n 100
 int getRow (char seed[100]){
