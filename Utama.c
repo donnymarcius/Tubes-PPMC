@@ -1,7 +1,7 @@
 /*EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
  * Modul 8 - TUGAS BESAR
- * Kelompok				: 5
- * Hari dan Tanggal		: Kamis,  Maret 
+ * Kelompok			: 5
+ * Hari dan Tanggal		: Jum'at, 17 April 2020 
  * Asisten (NIM)		: Akmal Narendra Sakti (13217034)
  * Nama file 		 	: Utama.c
  * Deskripsi			: Program menu utama untuk permainan Game Of life
