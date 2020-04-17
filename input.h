@@ -19,22 +19,29 @@ int getColumn (char seed[100]){
 	return b;			//mengembalikan nilai b
 }
 
-char getSeed (int a, int b, char seed[100],char seedawal[100][100]){
+char getSeed (int a, int b, char seed[100],char seedawal[m][n]){
 	FILE * fp;				//membaca file txt
     fp = fopen(seed,"r");			//seed menyimpan data nama file masukkan user
 
     int barlom;					//barlom menyimpan data tidak perlu dari file txt
-    int i;
+    int i,j;
+	
+   for (i=0; i<m; i++) {			//inisialisasi seedawal dengan spasi
+	   for (j=0; j<n; j++) {
+		   seedawal[i][j] = ' ';
+      }
+    }
+	
     for(i=0; i<2; i++) {			//melakulan 2 kali scan data
             fscanf(fp,"%d",&barlom);		//mengambil data tidak perlu dari file txt
     }
-    
-    int m,n;					//mengambil sell dari file txt menyimpannya di array
+	
+    //mengambil sell dari file txt menyimpannya di array
     char ch;
     ch = fgetc (fp);
-    for(m=0; m<a; m++) {
-        for(n=0; n<b; n++) {
-            fscanf(fp,"%c",&seedawal[m][n]);	//mengambil data selanjutnya (seed)
+    for(i=0; i<a; i++) {
+        for(j=0; j<b; j++) {
+            fscanf(fp,"%c",&seedawal[i][j]);	//mengambil data selanjutnya (seed)
         }
         ch = fgetc(fp);
 	}
