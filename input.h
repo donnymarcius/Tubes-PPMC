@@ -1,7 +1,7 @@
 /* EL2208 Praktikum Pemecahan Masalah dengan C 2019/2020
 * MODUL 8 – TUGAS BESAR
 * Kelompok : 1
-* Hari dan Tanggal : Kamis, 29 Maret 2018
+* Hari dan Tanggal : Jumat, 17 April 2020
 * Asisten (NIM) : Akmal Narendra Sakti (13217034)
 * Nama File : input.h
 * Deskripsi : Header input untuk program utama, membaca file eksternal (txt),
