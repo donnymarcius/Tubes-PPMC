@@ -1,4 +1,6 @@
 #include <stdio.h>
+#define m 100
+#define n 100
 int getRow (char seed[100]){
  	FILE * fp;		//membaca file txt
  	fp = fopen(seed,"r");	//seed menyimpan data nama file masukkan user
